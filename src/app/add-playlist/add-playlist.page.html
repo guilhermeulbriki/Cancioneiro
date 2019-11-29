@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Selecione a playlist:</ion-title>
+    <a (click)="closeModal()">Cancel</a>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button expand="block" (click)="createPlaylist()" color="success">Criar Playlist</ion-button>
+  <ion-list>
+    <ion-item *ngFor="let folder of playlist; let number = index">
+      <ion-icon name="folder"></ion-icon>
+      <ion-label (click)="addToPlaylist(folder)"><a>{{ folder }}</a></ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

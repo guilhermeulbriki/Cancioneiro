@@ -1,0 +1,20 @@
+import { IonicModule } from '@ionic/angular';
+import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Tab1Page } from './tab1.page';
+import { AddPlaylistPage } from '../add-playlist/add-playlist.page';
+
+@NgModule({
+  imports: [
+    IonicModule,
+    CommonModule,
+    FormsModule,
+    RouterModule.forChild([{ path: '', component: Tab1Page }])
+  ],
+  declarations: [Tab1Page]
+  // declarations: [Tab1Page, AddPlaylistPage],
+  // entryComponents: [AddPlaylistPage]
+})
+export class Tab1PageModule {}

@@ -1,0 +1,8 @@
+{
+  "name": "cancioneiro",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "b566b7c1"
+}

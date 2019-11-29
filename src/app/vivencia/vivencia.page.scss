@@ -1,0 +1,78 @@
+ion-header.header {
+  background-color: #f4f5f8;
+  box-shadow: 2px 2px 2px rgb(175, 162, 162);
+  text-align: center;
+}
+
+ion-header.header img {
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+ion-header.header a#anterior {
+  text-decoration: none;
+  font-size: 13pt;
+  color: #12ac4f;
+}
+
+ion-col h4{
+  margin: 0;
+  text-align: center;
+  font-size: 12pt;
+  color: #b22;
+}
+
+ion-col h4.disable{
+  display: none;
+}
+
+ion-header.header a#proxima {
+  text-decoration: none;
+  font-size: 13pt;
+  color: #12ac4f;
+}
+
+ion-grid {
+  padding: 0px;
+}
+
+ion-col#rolagemButton {
+  height: 50px;
+  padding: 5px 0 0 0;
+}
+
+ion-button.buttonRolagem {
+  margin: auto;
+}
+
+ion-col#range {
+  height: 50px;
+  padding: auto;
+}
+
+ion-row#bottom h4{
+  margin: 0;
+  text-align: center;
+  font-size: 12pt;
+  color: #b22;
+}
+
+ion-range {
+  margin: auto;
+  padding: 0;
+}
+
+div#song h2 {
+  margin-left: 10px;
+}
+
+div#song pre {
+  padding: 0px 10px 10px 10px;
+  margin-top: 0px;
+  white-space: pre-wrap;
+}
+
+div#song pre p {
+  font-size: 13pt;
+}

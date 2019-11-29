@@ -1,0 +1,18 @@
+<ion-header id="header">
+  <a>
+    <img src="../../assets/images/logo.png">
+  </a>
+</ion-header>
+
+<ion-content id="content">
+  <ion-searchbar (ionInput)="FiltrarMusicas($event)" placeholder="Filtrar..."></ion-searchbar>
+  <ion-list>
+    <div *ngFor="let musica of favoritas">  
+      <ion-item *ngIf="favoritas.indexOf(musica) > -1">
+        <ion-icon class="heart" (click)="Remover(musica)" name="heart" color="danger"></ion-icon>
+        <ion-label><a (click)="Listar(musica)">{{ musica }}</a></ion-label>
+        <ion-icon name="add" (click)="AdicionarNaPlaylist(musica)" color="dark"></ion-icon>
+      </ion-item>
+    </div>  
+  </ion-list>
+</ion-content>

@@ -1,0 +1,26 @@
+@import "../../assets/fonts/Poppins/Poppins-SemiBold.ttf";
+
+ion-header#header {
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px rgb(201, 190, 190);
+    text-align: center;
+}
+  
+ion-header#header img {
+    height: 50px;
+    padding: 0;
+    margin: 0;
+}  
+
+ion-list {
+    padding-top: 10px;
+}
+
+ion-label {
+    padding-left: 17px;
+    font-size: 13pt;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}

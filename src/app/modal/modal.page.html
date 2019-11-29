@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Músicas Selecionadas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <span id="back">
+    <ion-button expand="block" id="back" color="primary" (click)="closeModal()">Back</ion-button>
+  </span>
+  <ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
+    <ion-item *ngFor="let row of ListarVivencias; let number = index">
+      <ion-label>{{ row }}</ion-label>
+      <ion-reorder slot="end"></ion-reorder>
+    </ion-item>
+  </ion-reorder-group>
+  <span id="zerar">
+    <ion-button id="zerar" (click)="drop()" color="danger">Excluir</ion-button>
+  </span>
+</ion-content>

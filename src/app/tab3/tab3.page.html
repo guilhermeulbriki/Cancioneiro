@@ -1,0 +1,15 @@
+<ion-header id="header">
+  <a>
+    <img src="../../assets/images/logo.png">
+  </a>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let playlist of playlists; let numero = index">
+      <ion-icon name="folder" color="medium"></ion-icon>
+      <ion-label (click)="OpenPlaylist(playlist)">{{ playlist }}</ion-label>
+      <ion-icon (click)="DeletePlaylist(numero, playlist)" name="close"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

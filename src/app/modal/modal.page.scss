@@ -1,0 +1,23 @@
+ion-title {
+    text-align: center;
+}
+
+ion-reorder-group ion-icon {
+    margin-right: 15px;
+}
+
+ion-reorder-group ion-button {
+    margin-top: 10px;
+}
+
+span#zerar {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    padding: 6px;
+    text-align: center;
+}
+
+span#zerar ion-button#zerar {
+    width: 80%;
+}

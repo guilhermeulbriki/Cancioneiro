@@ -1,0 +1,57 @@
+ion-slides{
+    height: 100%;
+}
+
+ion-title {
+    width: 100%;
+    padding-left: 10px;
+}
+
+ion-title h1{
+    float: left;
+    margin-top: 12px;
+    font-size: 16pt;
+}
+
+ion-title a {
+    position: absolute;
+    text-decoration: none;
+    top: 15px;
+    right: 10px;
+    color: #000;
+    font-size: 10pt;
+}
+
+ion-title a.active {
+    display: block;
+}
+
+ion-title a.disable {
+    display: none;
+}
+
+ion-slide ion-content h2 {
+    padding: 10px;
+    font-size: 14pt;
+    margin-top: 30px;
+}
+
+ion-slide ion-content img {
+    width: 200px;
+    position: absolute;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+ion-slide ion-content h3 {
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    font-style: italic;
+    color: #000;
+    font-size: 12pt;
+}
+
+ion-slide {
+    display: block;
+}

@@ -1,0 +1,49 @@
+<ion-header id="header">
+  <ion-icon mode="md" (click)="confirmarMusicas()" id="menu" name="menu"></ion-icon>
+  <a>
+    <img src="../../assets/images/logo.png">
+  </a>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row id="listagemMusica">
+      <ion-col size="9">
+        <ion-searchbar (ionInput)="FiltrarMusicas($event)" placeholder="Filtrar..."></ion-searchbar>
+      </ion-col>
+      <ion-col id="confirm" size="3">
+        <a (click)="GoToVivencias()">
+          <ion-button id="confirm" color="success">Tocar</ion-button>
+        </a>
+      </ion-col>
+    </ion-row>
+    <ion-row id="filtragem">
+      <ion-col size="1" id="check">
+        <ion-checkbox *ngIf="check==false" (ionChange)="FiltrarFavoritados()" checked="false" id="checkbox"
+          color="success"></ion-checkbox>
+        <ion-checkbox *ngIf="check==true" (ionChange)="FiltrarFavoritados()" checked="true" id="checkbox"
+          color="success"></ion-checkbox>
+      </ion-col>
+      <ion-col id="label">
+        <ion-label>Favoritas</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-select (ionChange)="FiltrarFolder($event)" placeholder="escolha uma playlist">
+          <ion-select-option value="nenhuma">Nenhuma</ion-select-option>
+          <ion-select-option *ngFor="let folder of folders" value="{{folder}}">{{ folder }}</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <div *ngFor="let musica of titulosFiltrados; let number = index">
+      <ion-item *ngIf="titulosFiltrados.indexOf(musica) > -1">
+        <ion-label>{{ musica }}</ion-label>
+        <ion-icon name="checkmark-circle" *ngIf="icons[number]=='gravada'" (click)="AddOrRemove(musica)"
+          color="success"></ion-icon>
+        <ion-icon name="checkmark-circle-outline" *ngIf="icons[number]!='gravada'" (click)="AddOrRemove(musica)"
+          color="dark"></ion-icon>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>

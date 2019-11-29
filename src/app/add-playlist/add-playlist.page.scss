@@ -1,0 +1,24 @@
+ion-header a {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+
+ion-list {
+    padding-top: 10px;
+}
+
+ion-icon.topic {
+    margin-right: 10px;
+}
+
+ion-label{
+    padding-left: 10px;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+ion-label a {
+    color: #000;
+    text-decoration: none;
+}

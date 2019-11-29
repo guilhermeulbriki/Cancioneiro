@@ -1,0 +1,42 @@
+<ion-header class="header">
+  <ion-grid>
+    <ion-row id="top">
+      <ion-col id="rolagemButton" padding size="4">
+        <ion-button color="medium" (click)="configRolagem()" *ngIf="ColorRolagem=='off'" id="buttonRolagem">Travado
+        </ion-button>
+        <ion-button color="success" (click)="configRolagem()" *ngIf="ColorRolagem=='on'" id="buttonRolagem">Rolando
+        </ion-button>
+      </ion-col>
+      <ion-col id="range" size="8">
+        <ion-range [(ngModel)]="range" pin="true" min="1" max="200" color="success">
+          <ion-label slot="start">Max</ion-label>
+          <ion-label slot="end">Min</ion-label>
+        </ion-range>
+      </ion-col>
+    </ion-row>
+    <ion-row id="bottom">
+      <ion-col size="4">
+        <a *ngIf="number != 0" id="anterior" (click)="prevSong()">
+          Anterior
+        </a>
+      </ion-col>
+      <ion-col size="4">
+        <h4 class="disable" id="h4Zerar" (click)="ZerarRolagem()">Zerar Rolagem</h4>
+      </ion-col>
+      <ion-col size="4">
+        <a id="proxima" (click)="nextSong()">
+          Próxima
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <div id="song">
+    <h2>{{title}}</h2>
+    <pre>
+      <p *ngFor="let row of song">{{row}}</p>
+    </pre>
+  </div>
+</ion-content>
