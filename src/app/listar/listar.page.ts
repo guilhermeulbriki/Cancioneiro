@@ -29,6 +29,8 @@ export class ListarPage implements OnInit {
       this.ColorRolagem = 'on';
       this.pixel = 1;
       this.pixelTravado = 1;
+      if (this.range === undefined) 
+        this.range = 100;
       const velocidade = this.range + 50;
       this.interval = setInterval(() => { this.Rolar(); }, velocidade);
     } else {
@@ -38,7 +40,7 @@ export class ListarPage implements OnInit {
   }
 
   Rolar() {
-    if (this.pixelTravado < window.innerHeight) {
+    if ((this.pixelTravado + 20) < window.innerHeight) {
       document.getElementById('h4Zerar').classList.remove('disable');
       if (this.pixelTravado > 1) {
         this.content.scrollToPoint(0, this.pixelTravado, 1500);
@@ -48,13 +50,10 @@ export class ListarPage implements OnInit {
         this.content.scrollToPoint(0, this.pixel, 1500);
         this.pixel = this.pixel + 2;
         this.pixelTravado = this.pixel;
-      }
-      console.log(this.pixelTravado);
-      console.log(this.pixel);
-      console.log('--------');
+      } 
     } else {
       clearInterval(this.interval);
-      console.log('parar')
+      this.ColorRolagem = 'off';
     }
   }
 
