@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cancioneirojumas.starter" version="0.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Cancioneiro Jumas Brasil</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework.com" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <description>Cancioneiro da Juventude Masculina de Schoenstatt</description>
+    <author email="guilhermeulbriki@gmail.com" href="http://github.com/guilhermeulbriki">Guiherme Luís Ulbriki</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
